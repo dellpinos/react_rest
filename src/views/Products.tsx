@@ -4,6 +4,9 @@ import ProductDetails from "../components/ProductDetails";
 import type { Product } from '../types';
 
 export async function loader() {
+    console.log('Here! Loader.');
+    console.log('BACKEND:', import.meta.env.VITE_API_URL);
+    
     const products = await getProducts();
     return products;
 }
